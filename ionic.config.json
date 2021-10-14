@@ -1,0 +1,7 @@
+{
+  "name": "apiExterna",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
