@@ -1,3 +1,4 @@
+import { CepService } from './../../services/cep.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./api.page.scss'],
 })
 export class ApiPage implements OnInit {
-cep: string = "26115470"
-  constructor() { }
+  cep: string = "91530034"
+  resultado : any = {cep:'', logradouro: ''}
+  constructor(private cepService: CepService) { }
 
   ngOnInit() {
+  }
+
+  consultarCEP() {
+    this.cepService.obterEndereco(this.cep).then((json) => {
+      this.resultado = json
+    }).catch((err) => {
+      console.log(err)
+    })
   }
 
 }

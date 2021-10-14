@@ -13,8 +13,15 @@
   <ion-input type="text" [(ngModel)]= "cep"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-button expando="block" (click)="consultarCEP()">Consultar</ion-button>
+  <ion-button expand="block" (click)="consultarCEP()">Consultar</ion-button>
 </ion-item>
 
-{{cep}}
+<ion-item>
+  <ion-label>CEP</ion-label>
+  <p>{{resultado.cep}}</p>
+</ion-item>
+<ion-item>
+  <ion-label>Logradouro</ion-label>
+  <p>{{resultado.logradouro}}</p>
+</ion-item>
 </ion-content>
