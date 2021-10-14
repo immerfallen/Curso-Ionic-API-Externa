@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+    <ion-title>Api</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+  <ion-label position="stacked" >Informe o seu CEP</ion-label>
+  <ion-input type="text" [(ngModel)]= "cep"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-button expando="block" (click)="consultarCEP()">Consultar</ion-button>
+</ion-item>
+
+{{cep}}
+</ion-content>
